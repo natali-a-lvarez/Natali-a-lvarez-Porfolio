@@ -1,0 +1,41 @@
+.hero {
+  padding: 2rem 2rem;
+  color: var(--light);
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  text-align: center;
+}
+
+.hero-text-content {
+  width: 85%;
+}
+
+.hero-text {
+  text-align: center;
+}
+
+.hero-img-container {
+  width: 65%;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.main-title {
+  color: #d45033;
+  font-size: 3.5rem;
+}
+
+.second-title {
+  font-size: 2.2rem;
+  color: var(--accent-color-light);
+}
+
+.second-title .body.light {
+  color: #d45033;
+}

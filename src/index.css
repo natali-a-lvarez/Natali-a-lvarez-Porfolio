@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  overflow-x: hidden;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --ff: "B612 Mono", monospace;
+  --accent-ff: "Yeseva One", cursive;
+
+  /* --accent-color-light: #e9a89a; */
+  --accent-color-light: #dd8673;
+  --accent-color-dark: #d45033;
+  --dark: #1a1a1a;
+  --dark-transparent: rgb(37, 37, 37, 0.85);
+  --light: #eae1d4;
+
+  font-family: var(--ff);
+  background-color: var(--dark);
+}
