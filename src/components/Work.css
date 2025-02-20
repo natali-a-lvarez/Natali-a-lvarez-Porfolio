@@ -42,6 +42,10 @@
   justify-content: center;
 }
 
+.work-card > .card-content-light {
+  color: #fff;
+}
+
 .work-card > .card-content > .card-header {
   display: flex;
   gap: 1rem;
@@ -69,7 +73,7 @@
 }
 
 .work-card:hover > img.blur {
-  filter: blur(10px);
+  filter: blur(10px) brightness(0.8);
 }
 
 .work-card:hover > img.zoom {
