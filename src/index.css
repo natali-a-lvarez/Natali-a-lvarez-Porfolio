@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=B612+Mono&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -17,13 +20,29 @@ html {
   --ff: "B612 Mono", monospace;
   --accent-ff: "Yeseva One", cursive;
 
-  /* --accent-color-light: #e9a89a; */
-  --accent-color-light: #dd8673;
-  --accent-color-dark: #d45033;
-  --dark: #1a1a1a;
-  --dark-transparent: rgb(37, 37, 37, 0.85);
-  --light: #eae1d4;
+  --accent-color-light: #ffafcc;
+  --accent-color-dark: #cba6f7;
 
+  --hero-accent-color-1: #ffafcc;
+  --hero-accent-color-2: #cba6f7;
+
+  --dark: #031b23;
+  --dark-transparent: #0414197e;
+  --light: #f5e0dc;
+}
+
+body {
   font-family: var(--ff);
   background-color: var(--dark);
+}
+
+body.light {
+  --dark: #fdeff8;
+  --light: #1e1e2e;
+  --dark-transparent: #c7beca90;
+
+  --hero-accent-color-1: #e14d77;
+  --hero-accent-color-2: #494fb1;
+
+  --accent-color-light: #ffafcc;
 }

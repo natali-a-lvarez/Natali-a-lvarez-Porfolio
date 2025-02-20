@@ -1,0 +1,144 @@
+.modal {
+  width: 100%;
+  border: solid inset 2px var(--accent-color-light);
+  display: flex;
+  flex-direction: column-reverse;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  z-index: 11;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-icons {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+
+.modal-icon {
+  color: var(--dark);
+}
+
+.modal-heading {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.modal-text {
+  font-size: 1.5rem;
+}
+
+.modal-section-about {
+  position: relative;
+  padding: 4rem 3rem;
+  padding-top: 7rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: var(--accent-color-light);
+}
+
+.modal-section-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.5rem;
+  border: solid 2px var(--accent-color-light);
+  padding: 3rem 2rem;
+  color: var(--light);
+  background-color: var(--dark);
+}
+
+.modal-sub-text {
+  font-size: 1.3rem;
+}
+
+.modal-close-btn {
+  cursor: pointer;
+  font-size: 2.4rem;
+  color: var(--accent-color-light);
+  position: absolute;
+  background-color: transparent;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.about-form {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.label-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.label {
+  font-size: 1.2rem;
+}
+
+#overlay {
+  position: fixed;
+  z-index: 10;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+@media all and (min-width: 600px) {
+  .modal-icon {
+    font-size: 3.2rem;
+  }
+}
+
+@media all and (min-width: 1000px) {
+  .modal {
+    width: 100rem;
+    max-width: 80%;
+    border-radius: 2rem;
+    flex-direction: row;
+  }
+
+  .modal-section-about {
+    padding: 10rem 6rem;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    width: 50%;
+  }
+
+  .modal-section-form {
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    padding: 10rem 8rem;
+    width: 50%;
+  }
+
+  .about-form {
+    gap: 2rem;
+  }
+
+  .label {
+    font-size: 1.6rem;
+  }
+}

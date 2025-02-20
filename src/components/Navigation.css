@@ -5,12 +5,14 @@ header {
 }
 
 .logo-container {
-  height: 4rem;
-  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo {
-  width: 100%;
+  height: 2.3em;
+  width: 2.3em;
 }
 
 .nav {
@@ -18,7 +20,6 @@ header {
   background-color: var(--dark-transparent);
   color: var(--light);
   font-size: 1.2rem;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,7 +40,7 @@ header {
 .hello-btn {
   background-color: var(--accent-color-light);
   color: #1a1a1a;
-  padding: 1rem 2rem;
+  padding: 0.5rem 1rem;
   border-radius: 100rem;
 }
 
@@ -52,7 +53,39 @@ header {
   color: inherit;
 }
 
-.nav ion-icon {
-  height: 3rem;
-  width: 3rem;
+@media all and (min-width: 1000px) {
+  .logo-container {
+    height: 6rem;
+    width: 6rem;
+  }
+
+  .logo-container:hover {
+    transition: 0.2s;
+    transform: scale(1.1);
+  }
+
+  .nav {
+    padding: 0.5rem 6rem;
+    font-size: 2rem;
+  }
+
+  .nav-list {
+    gap: 2.8rem;
+  }
+
+  .nav ion-icon {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+
+  .hello-btn:hover {
+    transition: 0.2s;
+    transform: scale(1.02);
+    font-size: 2.2rem;
+  }
+
+  .nav button:hover {
+    transition: 0.2s;
+    transform: scale(1.1);
+  }
 }

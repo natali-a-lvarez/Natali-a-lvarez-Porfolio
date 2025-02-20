@@ -1,0 +1,128 @@
+.work {
+  color: var(--light);
+  padding: 6rem 5rem;
+  padding-bottom: 3rem;
+  padding-top: 10rem;
+}
+
+.work-cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 2.5rem;
+}
+
+.work-card {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-width: 60rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.3rem 1.4rem rgba(0, 0, 0, 0.12);
+  justify-self: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.work-card > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.work-card > .card-content {
+  color: #1a1a1a;
+  position: absolute;
+  inset: 0;
+  padding-left: 1rem;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.work-card > .card-content > .card-header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-family: var(--accent-ff);
+  font-size: 1.4rem;
+}
+
+.work-card > .card-content > .card-text {
+  font-size: 1rem;
+}
+
+.work-card > .card-content > .card-header .git-link {
+  color: #1e1e1e;
+}
+
+.work-card > .card-content > .card-header .git-link:hover {
+  transition: 0.2s;
+  transform: scale(1.08);
+}
+
+.work-card > img,
+.work-card > .card-content {
+  transition: 200ms ease-in-out;
+}
+
+.work-card:hover > img.blur {
+  filter: blur(10px);
+}
+
+.work-card:hover > img.zoom {
+  transform: scale(1.05);
+}
+
+.work-card > .card-content.slide-left {
+  transform: translateX(-100%);
+}
+
+.work-card:hover > .card-content.slide-left {
+  transform: translateX(0);
+}
+
+.technologies-text {
+  margin-top: 1rem;
+}
+
+@media all and (min-width: 600px) {
+  .work {
+    padding: 6rem 12rem;
+  }
+
+  .work-card > .card-content > .card-header {
+    font-size: 1.8rem;
+  }
+
+  .work-card > .card-content > .card-text {
+    font-size: 1.4rem;
+  }
+}
+
+@media all and (min-width: 1000px) {
+  .work {
+    padding: 6rem 15rem;
+  }
+
+  .work-cards {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    row-gap: 2.5rem;
+  }
+
+  .work-card > .card-content {
+    padding-left: 2rem;
+    width: 60%;
+  }
+
+  .work-card > .card-content > .card-header {
+    font-size: 2.5rem;
+  }
+
+  .work-card > .card-content > .card-text {
+    font-size: 1.6rem;
+  }
+}
